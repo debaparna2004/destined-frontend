@@ -16,7 +16,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const { width } = Dimensions.get('window');
-const CARD_WIDTH = (width - 40) / 2;
+const SPACING = 12;
+const CARD_WIDTH = (width - 40 - SPACING) / 2;
 
 const Colors = {
   primary: '#FE3C72',
@@ -278,12 +279,14 @@ const styles = StyleSheet.create({
   },
   
   columnWrapper: {
-    justifyContent: 'space-between',
-    marginBottom: 16,
+    justifyContent: 'flex-start',
+    gap: SPACING,
+    marginBottom: SPACING,
   },
   
   cardWrapper: {
     width: CARD_WIDTH,
+    marginRight: SPACING,
   },
   
   card: {
